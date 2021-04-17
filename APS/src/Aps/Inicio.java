@@ -28,78 +28,93 @@ public class Inicio extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        nao = new javax.swing.JButton();
-        sim = new javax.swing.JButton();
+        btnNao = new javax.swing.JButton();
+        btnSim = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(240, 140, 240));
         setForeground(java.awt.Color.white);
+        setPreferredSize(new java.awt.Dimension(600, 350));
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 45)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("SEJA BEM VINDO");
+        jLabel1.setToolTipText("");
+        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel2.setText("NESTE PROGRAMA IREMOS CALCULAR O CONSUMO DE ENEGERGIA E DE ÁGUA QUE VOCÊ UTILIZA EM SUA CASA, BASTA INFORMAR ALGUNS VALORES E O PROGRAMA FARÁ O CALCULO. DESEJA CONTINUAR?");
+        jLabel2.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Neste programa será estimado o gasto de energia ou água em sua residência");
         jLabel2.setAutoscrolls(true);
 
-        nao.setText("NÃO, OBRIGADO");
-        nao.addActionListener(new java.awt.event.ActionListener() {
+        btnNao.setText("NÃO, OBRIGADO");
+        btnNao.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnNao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                naoActionPerformed(evt);
+                btnNaoActionPerformed(evt);
             }
         });
 
-        sim.setText("VAMOS LÁ!");
-        sim.addActionListener(new java.awt.event.ActionListener() {
+        btnSim.setText("SIM, VAMOS LÁ!");
+        btnSim.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnSim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                simActionPerformed(evt);
+                btnSimActionPerformed(evt);
             }
         });
+
+        jLabel3.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Deseja continuar?");
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jLabel1)
-                .add(200, 200, 200))
+            .add(jLabel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .add(layout.createSequentialGroup()
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                .addContainerGap()
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jLabel3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(jLabel2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
                     .add(layout.createSequentialGroup()
-                        .add(100, 100, 100)
-                        .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 537, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(layout.createSequentialGroup()
-                        .add(109, 109, 109)
-                        .add(sim, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(34, 34, 34)
+                        .add(btnSim, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 136, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(nao, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(111, Short.MAX_VALUE))
+                        .add(btnNao, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 136, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(28, 28, 28)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .add(31, 31, 31)
                 .add(jLabel1)
-                .add(61, 61, 61)
-                .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 47, Short.MAX_VALUE)
+                .add(36, 36, 36)
+                .add(jLabel2)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jLabel3)
+                .add(18, 18, 18)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(nao, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 31, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(sim, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 31, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(90, 90, 90))
+                    .add(btnSim, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 43, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(btnNao, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 43, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void naoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_naoActionPerformed
+    private void btnNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNaoActionPerformed
         dispose();
-    }//GEN-LAST:event_naoActionPerformed
+    }//GEN-LAST:event_btnNaoActionPerformed
 
-    private void simActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simActionPerformed
+    private void btnSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimActionPerformed
         Selecao selecao = new Selecao();
         selecao.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_simActionPerformed
+    }//GEN-LAST:event_btnSimActionPerformed
 
     /**
      * @param args the command line arguments
@@ -137,10 +152,11 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnNao;
+    private javax.swing.JButton btnSim;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JButton nao;
-    private javax.swing.JButton sim;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 
 }

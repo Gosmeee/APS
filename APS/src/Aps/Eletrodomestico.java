@@ -16,7 +16,7 @@ public class Eletrodomestico {
     
      double calculo_consumo()
     {
-        this.consumo = this.getPotencia() * this.getTempo();
+        this.consumo = (this.getPotencia() / 1000) * this.getTempo();
         return getConsumo();
     }
      double calculo_gastos()

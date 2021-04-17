@@ -3,11 +3,27 @@ package Aps;
 public class Agua {
     private double tempo;
     private double consumo;
+    private double gastos;
     
     double calculo()
     {
-        this.consumo = (this.tempo * 60) * 16;
+        this.consumo = (this.tempo * 16) * 30 ;
         return getConsumo();
+    }
+    
+    double gastos()
+    {
+        this.gastos = calculo() * 0.005;
+        
+        return getGastos();
+    }
+
+    public double getGastos() {
+        return gastos;
+    }
+
+    public void setGastos(double gastos) {
+        this.gastos = gastos;
     }
 
     public double getTempo() {
